@@ -1,9 +1,8 @@
 {
-    "name": "PackageName.Tests",
+    "name": "CleanLocalizedStringInspector.Editor",
+    "rootNamespace": "CleanLocalizedStringInspector.Editor",
     "references": [
-        "PackageName",
-        "UnityEditor.TestRunner",
-        "UnityEngine.TestRunner"
+        "CleanLocalizedStringInspector"
     ],
     "includePlatforms": [
         "Editor"
@@ -13,9 +12,7 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [
-        "UNITY_INCLUDE_TESTS"
-    ],
+    "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
 }

@@ -1,0 +1,24 @@
+{
+  "name": "com.starasgames.unity-clean-localized-string-inspector",
+  "version": "0.0.1",
+  "displayName": "Clean Localized String Inspector",
+  "description": "Improves UX of the LocalizedString in the inspector. Based on com.unity.localization package.",
+  "unity": "2022.3",
+  "unityRelease": "1f1",
+  "keywords": [
+    "tool"
+  ],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "samples": [
+    {
+      "displayName": "Sample name",
+      "description": "Sample description.",
+      "path": "Samples~/SampleFolderName"
+    }
+  ],
+  "hideInEditor": true
+}

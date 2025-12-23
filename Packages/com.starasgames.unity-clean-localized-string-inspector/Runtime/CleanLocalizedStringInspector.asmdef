@@ -1,5 +1,6 @@
 {
-    "name": "PackageName",
+    "name": "CleanLocalizedStringInspector",
+    "rootNamespace": "CleanLocalizedStringInspector",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
