@@ -1,7 +1,9 @@
 {
     "name": "CleanLocalizedStringInspector",
     "rootNamespace": "CleanLocalizedStringInspector",
-    "references": [],
+    "references": [
+        "Unity.Localization"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
