@@ -2,7 +2,9 @@
     "name": "CleanLocalizedStringInspector.Editor",
     "rootNamespace": "CleanLocalizedStringInspector.Editor",
     "references": [
-        "CleanLocalizedStringInspector"
+        "CleanLocalizedStringInspector",
+        "Unity.Localization",
+        "Unity.Localization.Editor"
     ],
     "includePlatforms": [
         "Editor"

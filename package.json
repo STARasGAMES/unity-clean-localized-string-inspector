@@ -20,5 +20,8 @@
       "path": "Samples~/SampleFolderName"
     }
   ],
-  "hideInEditor": true
+  "hideInEditor": true,
+  "dependencies": {
+    "com.unity.localization": "1.5.9"
+  }
 }
