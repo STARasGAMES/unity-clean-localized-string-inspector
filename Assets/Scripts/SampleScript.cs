@@ -7,6 +7,6 @@ public class SampleScript : MonoBehaviour
         public LocalizedString defaultDrawer;
         [CleanLocalizedString]
         public LocalizedString cleanDrawer;
-        [CleanLocalizedString(isMultiline: true)]
+        [CleanLocalizedString(lineCount: 3)]
         public LocalizedString cleanDrawerMultiline;
 }

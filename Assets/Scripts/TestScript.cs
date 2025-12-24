@@ -28,7 +28,7 @@ public class TestScript : MonoBehaviour
     public LocalizedString cleanDrawerInvalidGuidTableRef;
 
     [Tooltip("Test tooltip")]
-    [CleanLocalizedString(isMultiline: true)]
+    [CleanLocalizedString(lineCount: 5)]
     public LocalizedString cleanDrawerMultiline;
 
     [CleanLocalizedString()]
