@@ -15,6 +15,14 @@ MonoBehaviour:
   m_TableCollectionName: DefaultTable
   m_TableCollectionNameGuidString: add2f637b927bf342b00161647ea9a8b
   m_Entries:
+  - m_Id: 295489476628480
+    m_Key: SampleKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297357460246528
+    m_Key: SampleKeyMultiline
+    m_Metadata:
+      m_Items: []
   - m_Id: 5018292457472
     m_Key: TEMP_9d50d8ce39164bc59f70d0b00620b880
     m_Metadata:
@@ -25,6 +33,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 82508574756864
     m_Key: TEMP_feb4f5e2c4964551bb55f7c525b20910
+    m_Metadata:
+      m_Items: []
+  - m_Id: 333648868544512
+    m_Key: TEMP_930de85f672b47a1986042fdd59e2718
     m_Metadata:
       m_Items: []
   m_Metadata:

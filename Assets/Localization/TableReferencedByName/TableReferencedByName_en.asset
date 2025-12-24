@@ -27,7 +27,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18009482203136
-    m_Localized: Test test
+    m_Localized: 'Test test Test test Test test Test test Test test Test test Test
+      test Test test Test test Test test Test test Test test Test test '
     m_Metadata:
       m_Items: []
   references:

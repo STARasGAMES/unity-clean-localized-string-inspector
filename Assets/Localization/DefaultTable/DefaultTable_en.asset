@@ -30,6 +30,18 @@ MonoBehaviour:
     m_Localized: asdfsdfgsdf
     m_Metadata:
       m_Items: []
+  - m_Id: 295489476628480
+    m_Localized: Hi, I'm a sample text, and you can see me from inspector!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 297357460246528
+    m_Localized: "For bigger chunks of text use multiline! \n1\n2\n3\n4\n5\n6\n7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 333648868544512
+    m_Localized: Hello multiline message
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

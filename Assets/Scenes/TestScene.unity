@@ -122,6 +122,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &90855671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 90855673}
+  - component: {fileID: 90855672}
+  m_Layer: 0
+  m_Name: Sample
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &90855672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90855671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548af8989b124557bb845f1b2e0a0207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDrawer:
+    m_TableReference:
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
+    m_TableEntryReference:
+      m_KeyId: 295489476628480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawer:
+    m_TableReference:
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
+    m_TableEntryReference:
+      m_KeyId: 295489476628480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawerMultiline:
+    m_TableReference:
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
+    m_TableEntryReference:
+      m_KeyId: 297357460246528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
+--- !u!4 &90855673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90855671}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249333226
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,16 +229,16 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
     m_TableEntryReference:
-      m_KeyId: 5018292457472
+      m_KeyId: 295489476628480
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   cleanDrawerDefaultTableRef:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 295489476628480
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -207,9 +281,9 @@ MonoBehaviour:
     m_LocalVariables: []
   cleanDrawerMultiline:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 333648868544512
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -256,3 +330,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 249333228}
+  - {fileID: 90855673}
