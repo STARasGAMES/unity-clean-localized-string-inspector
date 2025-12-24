@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Spanish (Argentina) (es-AR)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Spanish (Argentina) (es-AR)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: b0ae63ecad2cdbd4781bbd081fe74ac0
+  m_SerializeEntries:
+  - m_GUID: 0963f6e67bde96a498806319884269b7
+    m_Address: Weapons_es-AR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-AR
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 17e79fbfce99d5547be923daa81e5942, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 278cf977766ce194ebb0c0f94acd44e8, type: 2}
+    - {fileID: 11400000, guid: 8a0c09998adcdfb4380837ed02f3d7bf, type: 2}
