@@ -34,9 +34,6 @@ public class TestScript : MonoBehaviour
     [CleanLocalizedString()]
     public string invalidFieldType;
 
-    [Range(0f, 1f)]
-    public string unityTest;
-
     public TestInnerMembers testInnerMembers = new TestInnerMembers();
 
     [Serializable]

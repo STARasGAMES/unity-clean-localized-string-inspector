@@ -256,7 +256,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:a407d81bae10b6a4d9d09c5ddb5510c5
     m_TableEntryReference:
-      m_KeyId: 13631295721472
+      m_KeyId: 369140297240576
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -288,6 +288,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  invalidFieldType: 
   testInnerMembers:
     defaultDrawer:
       m_TableReference:
@@ -300,13 +301,14 @@ MonoBehaviour:
       m_LocalVariables: []
     cleanDrawer:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 415393680855040
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    invalidFieldType: 
   references:
     version: 2
     RefIds: []

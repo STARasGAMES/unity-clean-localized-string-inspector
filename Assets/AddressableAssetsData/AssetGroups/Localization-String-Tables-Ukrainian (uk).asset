@@ -23,6 +23,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 169e15ea74b121b44b321e581c05b2d2
+    m_Address: Weapons_uk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1cd94f39abbde814db94d04ba3e5f136
     m_Address: TableReferencedByGuid_uk
     m_ReadOnly: 1

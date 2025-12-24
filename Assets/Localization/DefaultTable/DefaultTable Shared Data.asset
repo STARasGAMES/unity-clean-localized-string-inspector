@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: TEMP_930de85f672b47a1986042fdd59e2718
     m_Metadata:
       m_Items: []
+  - m_Id: 415393680855040
+    m_Key: Test.testInnerMembers.cleanDrawer
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

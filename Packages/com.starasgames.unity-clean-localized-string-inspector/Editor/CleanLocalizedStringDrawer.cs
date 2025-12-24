@@ -157,8 +157,14 @@ namespace CleanLocalizedStringInspector.Editor
 
                         table = LocalizationSettings.StringDatabase.GetTable(tableRef);
                         var tempKey = $"TEMP_{System.Guid.NewGuid():N}";
-
+                        
                         entry = table.AddEntry(tempKey, newValue);
+                        var newKeyName = LocalizationKeyNameGenerator.GetKeyNameFromTemplate(attr.KeyNameTemplate, property, entry, tableCollection.SharedData);
+                        if (string.IsNullOrEmpty(newKeyName) == false)
+                        {
+                            table.SharedData.RenameKey(entry.KeyId, newKeyName);
+                            tempKey = newKeyName;
+                        }
                         Debug.Log($"Created Entry in Table {table}: <b>{tempKey}</b> (will be renamed on save)");
 
                         EditorUtility.SetDirty(table);

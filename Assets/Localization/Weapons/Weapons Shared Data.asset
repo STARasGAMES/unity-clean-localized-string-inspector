@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Weapons Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Weapons
+  m_TableCollectionNameGuidString: bdf451768d67642409cb948e3c9f36fc
+  m_Entries:
+  - m_Id: 8501330579456
+    m_Key: 1_Axe.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8466773708800
+    m_Key: 1_Axe.displayName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9512698908672
+    m_Key: 1_Axe.levels[0].description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9567191306240
+    m_Key: 1_Axe.levels[1].description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9601001590784
+    m_Key: 1_Axe.levels[2].description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6544650014720
+    m_Key: Axe.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6524626407424
+    m_Key: Axe.displayName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2130673537024
+    m_Key: Axe.levels[1].description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6342576836608
+    m_Key: Axe.levels[2].description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10498008027136
+    m_Key: Axe.levels[0].description
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5537069643172413444
+  references:
+    version: 2
+    RefIds:
+    - rid: 5537069643172413444
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1766599653020

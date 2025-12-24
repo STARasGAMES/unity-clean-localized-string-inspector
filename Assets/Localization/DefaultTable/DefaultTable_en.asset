@@ -42,6 +42,10 @@ MonoBehaviour:
     m_Localized: Hello multiline message
     m_Metadata:
       m_Items: []
+  - m_Id: 415393680855040
+    m_Localized: I'm inner member
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
