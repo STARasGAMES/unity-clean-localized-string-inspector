@@ -22,6 +22,13 @@ namespace CleanLocalizedStringInspector.Editor
                 fixedHeight = EditorGUIUtility.singleLineHeight - 6,
                 alignment = TextAnchor.MiddleCenter,
             };
+
+            public static readonly GUIStyle tableRefLabel = new GUIStyle(EditorStyles.miniTextField)
+            {
+                fontSize = 12,
+                fixedHeight = EditorGUIUtility.singleLineHeight + 2,
+                alignment = TextAnchor.MiddleLeft,
+            };
         }
 
         private static readonly GUIContent UnlinkTableEntry = new("", "");
@@ -69,7 +76,7 @@ namespace CleanLocalizedStringInspector.Editor
                  */
                 EditorGUI.BeginProperty(position, label, property);
 
-                var fieldHeight = attr.IsMultiline ? EditorGUIUtility.singleLineHeight * 3 : EditorGUIUtility.singleLineHeight;
+                var fieldHeight = EditorGUIUtility.singleLineHeight * attr.LineCount;
 
                 var foldoutRect = new Rect(position.x, position.y, EditorGUIUtility.labelWidth - 32, EditorGUIUtility.singleLineHeight);
                 property.isExpanded = EditorGUI.Foldout(foldoutRect, property.isExpanded, label, true);
@@ -96,7 +103,7 @@ namespace CleanLocalizedStringInspector.Editor
                 }
 
                 EditorGUI.BeginChangeCheck();
-                string newValue = attr.IsMultiline
+                string newValue = attr.LineCount > 1
                     ? EditorGUI.TextArea(textFieldRect, value)
                     : EditorGUI.TextField(textFieldRect, value);
                 if (EditorGUI.EndChangeCheck() && !string.IsNullOrEmpty(newValue))
@@ -114,7 +121,7 @@ namespace CleanLocalizedStringInspector.Editor
                         // Ideally, I would like to disable input field when we can't create new localization key.
                         // But this requires costly validations every editor Repaint, slowing down already slow editor gui.
                         // That's why we stick with last-moment-check. In theory, invalid state should be a rare thing, so shouldn't bother too much.
-                        var tableRef = GetTableReferenceFromString(attr.TableNameOrGuid);
+                        var tableRef = GetTableReferenceForNewLocalizationKey(attr.TableNameOrGuid);
                         if (IsTableReferenceValid(tableRef, out var tableCollection) == false)
                         {
                             string message;
@@ -170,8 +177,11 @@ namespace CleanLocalizedStringInspector.Editor
                 EditorGUI.EndProperty();
             }
 
-            DrawLocale(position, isLocaleSet);
-            DrawTableReference(position, localizedString, attr.IsMultiline);
+            if (property.isExpanded == false)
+            {
+                DrawLocale(position, isLocaleSet);
+                DrawTableReference(position, localizedString);
+            }
         }
 
         private static void DrawTableReferenceLinkToggle(Rect position, SerializedProperty property, LocalizedString localizedString)
@@ -197,21 +207,24 @@ namespace CleanLocalizedStringInspector.Editor
             EditorGUI.EndDisabledGroup();
         }
 
-        private static void DrawTableReference(Rect position, LocalizedString localizedString, bool isMultiline)
+        private static void DrawTableReference(Rect position, LocalizedString localizedString)
         {
-            bool isHover = position.Contains(Event.current.mousePosition);
+            var fieldRect = position;
+            fieldRect.x += EditorGUIUtility.labelWidth;
+            fieldRect.width -= EditorGUIUtility.labelWidth;
+            bool isHover = fieldRect.Contains(Event.current.mousePosition);
             if (isHover == false)
                 return;
 
             var content = new GUIContent(GetDisplayableTableEntryReference(localizedString.TableReference, localizedString.TableEntryReference));
-            var size = Styles.localeLabel.CalcSize(content);
-            var rect = new Rect(EditorGUIUtility.labelWidth - size.x, position.y, size.x, EditorGUIUtility.singleLineHeight);
+            var size = Styles.tableRefLabel.CalcSize(content);
+            var rect = new Rect(Mathf.Max(0, EditorGUIUtility.labelWidth - size.x), position.y, size.x, size.y);
             // I didn't like how this offset looks and feels on multiline fields.
             // if (isMultiline) 
             //     rect.y += EditorGUIUtility.singleLineHeight;
 
             EditorGUI.BeginDisabledGroup(false);
-            EditorGUI.LabelField(rect, content, Styles.localeLabel);
+            EditorGUI.LabelField(rect, content, Styles.tableRefLabel);
             EditorGUI.EndDisabledGroup();
         }
 
@@ -260,7 +273,7 @@ namespace CleanLocalizedStringInspector.Editor
             }
 
             var attr = attribute as CleanLocalizedStringAttribute;
-            return attr.IsMultiline ? EditorGUIUtility.singleLineHeight * 3 : EditorGUIUtility.singleLineHeight;
+            return EditorGUIUtility.singleLineHeight * attr.LineCount;
         }
 
         private static bool IsTableReferenceValid(TableReference tableReference, out StringTableCollection tableCollection)
@@ -268,13 +281,11 @@ namespace CleanLocalizedStringInspector.Editor
             tableCollection = null;
             if (tableReference.ReferenceType == TableReference.Type.Empty)
                 return false;
-            if (LocalizationSettings.HasSettings == false)
-                return false;
             tableCollection = LocalizationEditorSettings.GetStringTableCollection(tableReference);
             return tableCollection != null;
         }
 
-        private static TableReference GetTableReferenceFromString(string tableNameOrGuid)
+        private static TableReference GetTableReferenceForNewLocalizationKey(string tableNameOrGuid)
         {
             if (string.IsNullOrEmpty(tableNameOrGuid))
             {

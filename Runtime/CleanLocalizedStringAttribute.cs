@@ -13,7 +13,7 @@ namespace CleanLocalizedStringInspector
         /// </summary>
         public string TableNameOrGuid { get; }
 
-        public bool IsMultiline { get; }
+        public int LineCount { get; }
 
         /// <summary>
         /// Marks LocalizedString field to be drawn using CleanLocalizedStringInspector.
@@ -24,11 +24,11 @@ namespace CleanLocalizedStringInspector
         /// If starts with `GUID:` prefix then string is parsed as table Guid reference.
         /// This Guid should be equal to AssetDatabase guid of the SharedData of the required table. You can grab it from .meta file.
         /// Otherwise, string is treated as table name reference.</param>
-        /// <param name="isMultiline"></param>
-        public CleanLocalizedStringAttribute(string tableNameOrGuid = null, bool isMultiline = false)
+        /// <param name="lineCount">How many lines this field should use. In range [1..20]</param>
+        public CleanLocalizedStringAttribute(string tableNameOrGuid = null, int lineCount = 1)
         {
             TableNameOrGuid = tableNameOrGuid;
-            IsMultiline = isMultiline;
+            LineCount = Mathf.Clamp(lineCount, 1, 20);
         }
     }
 }
