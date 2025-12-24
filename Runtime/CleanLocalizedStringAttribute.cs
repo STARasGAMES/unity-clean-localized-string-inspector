@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace CleanLocalizedStringInspector
@@ -16,7 +13,7 @@ namespace CleanLocalizedStringInspector
         /// </summary>
         public string TableNameOrGuid { get; }
 
-        public bool Multiline { get; }
+        public bool IsMultiline { get; }
 
         /// <summary>
         /// Marks LocalizedString field to be drawn using CleanLocalizedStringInspector.
@@ -25,14 +22,13 @@ namespace CleanLocalizedStringInspector
         /// Indicates in what table put newly created localization keys.
         /// If null then default string table reference is used when creating a new localization key.
         /// If starts with `GUID:` prefix then string is parsed as table Guid reference.
-        /// This Guid should be equal to AssetDatabase guid of the SharedData of the required table.
-        /// 
+        /// This Guid should be equal to AssetDatabase guid of the SharedData of the required table. You can grab it from .meta file.
         /// Otherwise, string is treated as table name reference.</param>
-        /// <param name="multiline"></param>
-        public CleanLocalizedStringAttribute(string tableNameOrGuid = null, bool multiline = false)
+        /// <param name="isMultiline"></param>
+        public CleanLocalizedStringAttribute(string tableNameOrGuid = null, bool isMultiline = false)
         {
             TableNameOrGuid = tableNameOrGuid;
-            Multiline = multiline;
+            IsMultiline = isMultiline;
         }
     }
 }
