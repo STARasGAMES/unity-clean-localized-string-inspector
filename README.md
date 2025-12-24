@@ -3,7 +3,7 @@ Default Unity's property look:
 
 <img width="635" height="129" alt="image" src="https://github.com/user-attachments/assets/bbe845ac-b6b1-4880-bc28-710a70d54274" />
 
-Clean and easier to use drawer:
+Improved property look and UX:
 
 <img width="636" height="160" alt="image" src="https://github.com/user-attachments/assets/7511cfcf-9161-42e8-8ab6-a4bb7d378216" />
 
