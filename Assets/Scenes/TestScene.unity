@@ -327,9 +327,141 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2047060362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2047060364}
+  - component: {fileID: 2047060363}
+  m_Layer: 0
+  m_Name: Test (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2047060363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047060362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d60a6cf62c4b3987cc8d34b464f42e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDrawer:
+    m_TableReference:
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
+    m_TableEntryReference:
+      m_KeyId: 295489476628480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawerDefaultTableRef:
+    m_TableReference:
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
+    m_TableEntryReference:
+      m_KeyId: 295489476628480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawerNameTableRef:
+    m_TableReference:
+      m_TableCollectionName: GUID:3f397c96170f3b341b422df6bc5f42c9
+    m_TableEntryReference:
+      m_KeyId: 18009482203136
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawerGuidTableRef:
+    m_TableReference:
+      m_TableCollectionName: GUID:a407d81bae10b6a4d9d09c5ddb5510c5
+    m_TableEntryReference:
+      m_KeyId: 369140297240576
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawerInvalidNameTableRef:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawerInvalidGuidTableRef:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  cleanDrawerMultiline:
+    m_TableReference:
+      m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
+    m_TableEntryReference:
+      m_KeyId: 333648868544512
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  invalidFieldType: 
+  testInnerMembers:
+    defaultDrawer:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    cleanDrawer:
+      m_TableReference:
+        m_TableCollectionName: GUID:add2f637b927bf342b00161647ea9a8b
+      m_TableEntryReference:
+        m_KeyId: 415393680855040
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    invalidFieldType: 
+  references:
+    version: 2
+    RefIds: []
+--- !u!4 &2047060364
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047060362}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 249333228}
+  - {fileID: 2047060364}
   - {fileID: 90855673}
